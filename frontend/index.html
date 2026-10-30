@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flux de aprovizionare</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script src="script.js"></script>
+<body>
+
+    <header>
+        <h1>Flux de aprovizionare</h1>
+        <p>Platformă de gestionare a achizițiilor, depozitului și facturilor</p>
+    </header>
+
+    <main>
+        <h2>Panou principal</h2>
+        <button onclick="formularLogin()">Autentificare</button>
+<p id="stare-autentificare">Nu ești autentificat.</p>
+        <p>Selectează secțiunea în care dorești să lucrezi.</p>
+
+  
+<div class="meniu">
+    <button onclick="afiseazaFurnizori()">Furnizori</button>
+    <button onclick="formularFurnizor()">+ Furnizor nou</button>
+    <button onclick="afiseazaProduse()">Produse</button>
+    <button onclick="formularProdus()">+ Produs nou</button>
+    <button onclick="afiseazaComenzi()">Comenzi</button>
+    <button onclick="formularComanda()">+ Comandă nouă</button>
+    <button onclick="afiseazaFacturi()">Facturi</button>
+    <button onclick="formularFactura()">+ Factură nouă</button>
+    <button onclick="verificaFactura()">Verifică factura</button>
+    <button onclick="afiseazaReceptii()">Recepții</button>
+    <button onclick="formularReceptie()">+ Recepție nouă</button>
+    <button onclick="afiseazaNotificari()">Notificări</button>
+    <button onclick="trimiteNotificariEmail()">
+    Trimite notificări pe email
+</button>
+</div>
+
+        <section id="rezultate"></section>
+    </main>
+
+</body>
+</html>
+<

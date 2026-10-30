@@ -1,0 +1,337 @@
+/* DESIGN GENERAL */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+/* ANTET */
+
+header {
+    background: linear-gradient(120deg, #0f172a, #1e3a5f, #2563eb);
+    color: white;
+    padding: 45px 20px;
+    text-align: center;
+    border-bottom: 4px solid #38bdf8;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+    font-weight: 750;
+    letter-spacing: 0.5px;
+}
+
+header p {
+    margin: 10px 0 0;
+    color: #dbeafe;
+    font-size: 16px;
+}
+
+/* CONTINUT PRINCIPAL */
+
+main {
+    max-width: 1200px;
+    margin: 35px auto;
+    padding: 0 25px;
+}
+
+main h2 {
+    color: #0f2747;
+    font-size: 26px;
+    margin-bottom: 18px;
+}
+
+/* MENIU PRINCIPAL */
+
+.meniu {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.meniu button {
+    min-height: 115px;
+    padding: 22px 15px;
+    background: white;
+    color: #183153;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    font-size: 17px;
+    font-weight: 650;
+    cursor: pointer;
+    box-shadow: 0 5px 18px rgba(15, 23, 42, 0.06);
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease,
+                background 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.meniu button:hover {
+    background: #eff6ff;
+    border-color: #60a5fa;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(37, 99, 235, 0.12);
+}
+
+.meniu button:active {
+    transform: translateY(0);
+}
+
+/* ZONA REZULTATELOR */
+
+#rezultate {
+    margin-top: 35px;
+    padding: 28px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(15, 23, 42, 0.05);
+    overflow-x: auto;
+}
+
+#rezultate:empty {
+    display: none;
+}
+
+#rezultate h2,
+#rezultate h3 {
+    color: #17365d;
+}
+
+/* FORMULARE */
+
+input,
+select,
+textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px 14px;
+    margin: 7px 0 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+    background: #ffffff;
+    color: #1e293b;
+    font: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    color: #334155;
+}
+
+/* BUTOANE DIN FORMULARE */
+
+#rezultate button,
+main > button {
+    background: #2563eb;
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+#rezultate button:hover,
+main > button:hover {
+    background: #1d4ed8;
+}
+
+/* TABELE */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+}
+
+th,
+td {
+    padding: 13px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+    background: #eaf2ff;
+    color: #17365d;
+    font-weight: 700;
+}
+
+tr:hover {
+    background: #f8fafc;
+}
+
+/* ADAPTARE PENTRU ECRANE MICI */
+
+@media (max-width: 900px) {
+    .meniu {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 550px) {
+    header h1 {
+        font-size: 27px;
+    }
+
+    main {
+        padding: 0 15px;
+    }
+
+    .meniu {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .meniu button {
+        min-height: 75px;
+    }
+
+    #rezultate {
+        padding: 18px;
+    }
+}
+/* DESIGN RURIS */
+
+body {
+    background:
+        linear-gradient(
+            rgba(15, 23, 42, 0.45),
+            rgba(15, 23, 42, 0.45)
+        ),
+        url("ruris.png") center center / cover fixed;
+}
+
+header {
+    background: #102b4c;
+    border-bottom: 4px solid #f58220;
+}
+
+header h1 {
+    color: white;
+}
+
+main {
+    max-width: 1200px;
+    margin: 35px auto;
+    padding: 35px;
+    background: rgba(255, 255, 255, 0.93);
+    border-radius: 22px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(12px);
+}
+
+main h2 {
+    border-left: 5px solid #f58220;
+    padding-left: 15px;
+}
+
+.meniu button {
+    border-radius: 15px;
+    border: 1px solid #e2e8f0;
+    background: white;
+    color: #102b4c;
+}
+
+.meniu button:hover {
+    background: #fff4e8;
+    border-color: #f58220;
+    box-shadow: 0 10px 25px rgba(245, 130, 32, 0.18);
+}
+
+#rezultate button {
+    background: #f58220;
+}
+
+#rezultate button:hover {
+    background: #d96b10;
+}
+
+@media (max-width: 600px) {
+    main {
+        margin: 15px;
+        padding: 20px;
+    }
+}
+body {
+    background-position: center bottom;
+}
+
+main {
+    background: rgba(255, 255, 255, 0.97);
+}
+/* ULTIMELE RETUSURI RURIS */
+
+.meniu button {
+    min-height: 95px;
+    border-left: 4px solid #f58220;
+    font-size: 17px;
+    font-weight: 650;
+}
+
+.meniu button:hover {
+    background: #fff5eb;
+    border-left-color: #d9680c;
+}
+
+main > button {
+    background: #f58220;
+}
+
+main > button:hover {
+    background: #d9680c;
+}
+
+#rezultate {
+    border-top: 4px solid #f58220;
+}
+/* PICTOGRAME MENIU RURIS */
+
+.meniu button::before {
+    display: block;
+    font-size: 29px;
+    margin-bottom: 8px;
+}
+
+.meniu button:nth-child(1)::before { content: "👥"; }
+.meniu button:nth-child(2)::before { content: "➕"; }
+.meniu button:nth-child(3)::before { content: "📦"; }
+.meniu button:nth-child(4)::before { content: "🆕"; }
+
+.meniu button:nth-child(5)::before { content: "📋"; }
+.meniu button:nth-child(6)::before { content: "🛒"; }
+.meniu button:nth-child(7)::before { content: "📄"; }
+.meniu button:nth-child(8)::before { content: "➕"; }
+
+.meniu button:nth-child(9)::before { content: "✅"; }
+.meniu button:nth-child(10)::before { content: "🚚"; }
+.meniu button:nth-child(11)::before { content: "📥"; }
+.meniu button:nth-child(12)::before { content: "🔔"; }
+
+.meniu button:nth-child(13)::before { content: "✉️"; }
+
+.meniu button {
+    min-height: 110px;
+}
